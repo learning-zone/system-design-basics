@@ -1,24 +1,37 @@
 # System Design Basics
 
+> *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Your contributions are heartily ♡ welcome.*
+
+<br/>
+
+## Table of Contents
+
+<br/>
+
 ## Basic Steps
 
-1) **Clarify and agree on the scope of the system**
-* **User cases** (description of sequences of events that, taken together, lead to a system doing something useful)
+**1. Clarify and agree on the scope of the system:**
+
+* **User cases:** (description of sequences of events that, taken together, lead to a system doing something useful)
 	* Who is going to use it?
 	* How are they going to use it?
-* **Constraints** 
+
+* **Constraints:**
+
 	* Mainly identify **traffic and data handling** constraints at scale.
 	* Scale of the system such as requests per second, requests types, data written per second, data read per second)
 	* Special system requirements such as multi-threading, read or write oriented.
-	
-2) **High level architecture design (Abstract design)**
-* Sketch the important components and connections between them, but don't go into some details.
+
+**2. High level architecture design (Abstract design):**
+
+* Sketch the important components and connections between them, but don\'t go into some details.
 	* Application service layer (serves the requests)
 	* List different services required.
    	* Data Storage layer
    	* eg. Usually a scalable system includes webserver (load balancer), service (service partition), database (master/slave database cluster) and caching systems.
 
-3) **Component Design**
+**3. Component Design:**
+
 * Component + specific **APIs** required for each of them.
 * **Object oriented design** for functionalities.
 	* Map features to modules: One scenario for one module.
@@ -26,13 +39,16 @@
 		* Certain functions must have unique instance (Singletons)
 		* Core object can be made up of many other objects (composition).
 		* One object is another object (inheritance)
-* **Database schema design.**
 
-4) **Understanding Bottlenecks**
+**4. Database schema design:**
+
+* **Understanding Bottlenecks**
+
 * Perhaps your system needs a load balancer and many machines behind it to handle the user requests. * Or maybe the data is so huge that you need to distribute your database on multiple machines. What are some of the downsides that occur from doing that? 
 * Is the database too slow and does it need some in-memory caching?	
 
-5) **Scaling** your abstract design
+**5. Scaling:**
+
 * **Vertical scaling**
 	* You scale by adding more power (CPU, RAM) to your existing machine.
 * **Horizontal scaling**
@@ -67,29 +83,43 @@
 <p align="center">
   <img src="http://lethain.com/static/blog/intro_arch/platform_layer.png" alt="Platform Layer"/>
 </p>
-	
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 ## Key topics for designing a system
 
-1) **Concurrency** 
+**1. Concurrency:**
+
 * Do you understand threads, deadlock, and starvation? Do you know how to parallelize algorithms? Do you understand consistency and coherence?
 
-2) **Networking**
+**2. Networking:**
+
 * Do you roughly understand IPC and TCP/IP? Do you know the difference between throughput and latency, and when each is the relevant factor?
 
-3) **Abstraction**
-* You should understand the systems you’re building upon. Do you know roughly how an OS, file system, and database work? Do you know about the various levels of caching in a modern OS?
+**3. Abstraction:**
 
-4) **Real-World Performance**
+* You should understand the systems you\'re building upon. Do you know roughly how an OS, file system, and database work? Do you know about the various levels of caching in a modern OS?
+
+**4. Real-World Performance:**
+
 * You should be familiar with the speed of everything your computer can do, including the relative performance of RAM, disk, SSD and your network.
 
-5) **Estimation**
+**5. Estimation:**
+
 * Estimation, especially in the form of a back-of-the-envelope calculation, is important because it helps you narrow down the list of possible solutions to only the ones that are feasible. Then you have only a few prototypes or micro-benchmarks to write.	
 
-6) **Availability & Reliability**
+**6. Availability & Reliability:**
+
 *  Are you thinking about how things can fail, especially in a distributed environment? Do know how to design a system to cope with network failures? Do you understand durability?
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
-## Web App System design considerations:
+## Web App System design considerations
+
 * Security (CORS)
 * Using CDN
 	* A content delivery network (CDN) is a system of distributed servers (network) that deliver webpages and other Web content to a user based on the geographic locations of the user, the origin of the webpage and a content delivery server.
@@ -109,7 +139,12 @@
 * Responsive design
 * Browser compatibility
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 ## Working Components of Front-end Architecture
+
 * Code
   * HTML5/WAI-ARIA
   * CSS/Sass Code standards and organization
@@ -132,18 +167,6 @@
   * Deploy Process
   * Continuous Integration (Travis CI, Jenkins)
 
-**Links**
-
-[System Design Interviewing](http://www.hiredintech.com/system-design/)
-
-[Scalability for Dummies](http://www.lecloud.net/tagged/scalability)
-
-[Introduction to Architecting Systems for Scale](http://lethain.com/introduction-to-architecting-systems-for-scale/)
-
-[Scalable System Design Patterns](http://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html)
-
-[Scalable Web Architecture and Distributed Systems](http://www.aosabook.org/en/distsys.html)
-
-[What is the best way to design a web site to be highly scalable?](http://programmers.stackexchange.com/a/108679/62739)
-
-[How web works?](https://github.com/vasanthk/how-web-works)
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
