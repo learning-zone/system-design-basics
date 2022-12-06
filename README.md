@@ -189,3 +189,14 @@
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
+
+## Q. What is architecture?
+## Q. What is clean architecture?
+## Q. What is Code design principles (SOLID)?
+## Q. What is Component principles?
+## Q. What is Architecture principles?
+## Q. What are the concepts of the Clean Architectural design code using Solid Principles?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
